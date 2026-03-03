@@ -32,8 +32,8 @@
         <h2 class="section-title">Contáctame</h2>
         <img src="images/logo-digital.svg" alt="Luis Solis Logo" class="digital-logo" style="margin: 0 auto 2rem;">
         <div class="contact-info">
-            <p>Email: <a href="mailto:contact@jerryactor.com">contact@jerryactor.com</a></p>
-            <p>Teléfono: <a href="tel:+15550000000">+52 55 4188 0493</a></p>
+            <p>Email: <span id="contact-email"></span></p>
+            <p>Teléfono: <span id="contact-phone"></span></p>
         </div>
         <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Formulario enviado con éxito!');">
             <input type="text" name="name" placeholder="TU NOMBRE" aria-label="Tu Nombre" required>
@@ -66,6 +66,20 @@
                     navLinks.classList.remove('active');
                 }
             });
+        });
+
+        // Protect contact info from bots
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = 'contact';
+            const domain = 'jerryactor.com';
+            const emailContainer = document.getElementById('contact-email');
+            emailContainer.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+
+            const country = '+52';
+            const area = '55';
+            const number = '4188 0493';
+            const phoneContainer = document.getElementById('contact-phone');
+            phoneContainer.innerHTML = `<a href="tel:${country}${area}${number.replace(/\s/g, '')}">${country} ${area} ${number}</a>`;
         });
     </script>
 </body>
