@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Luis Solis</title>
+    <meta name="description" content="Contacta a Luis Solis para castings, colaboraciones y proyectos. Información de contacto y formulario directo.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-digital.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><img src="images/logo-digital.svg" alt="Luis Solis" class="nav-logo-img"></a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="about.html">Sobre Mí</a></li>
+            <li><a href="reel.html">Reel y Trabajo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Contáctame</h2>
+        <img src="images/logo-digital.svg" alt="Luis Solis Logo" class="digital-logo" style="margin: 0 auto 2rem;">
+        <div class="contact-info">
+            <p>Email: <a href="mailto:contact@jerryactor.com">contact@jerryactor.com</a></p>
+            <p>Teléfono: <a href="tel:+15550000000">+1 (555) 000-0000</a></p>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Formulario enviado con éxito!');">
+            <input type="text" name="name" placeholder="TU NOMBRE" aria-label="Tu Nombre" required>
+            <input type="email" name="email" placeholder="TU CORREO ELECTRÓNICO" aria-label="Tu Correo Electrónico" required>
+            <input type="text" name="subject" placeholder="ASUNTO (EJ. CONSULTA DE CASTING)" aria-label="Asunto">
+            <textarea name="message" placeholder="TU MENSAJE..." aria-label="Tu Mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <div style="margin-top: 1rem;">
+            <a href="#" class="btn-download">Descargar Currículum (PDF)</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luis Solis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

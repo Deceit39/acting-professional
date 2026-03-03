@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí | Luis Solis</title>
+    <meta name="description" content="Conoce a Luis Solis (Jerry), un actor joven y versátil con experiencia en comerciales, cortometrajes y doblaje.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-digital.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><img src="images/logo-digital.svg" alt="Luis Solis" class="nav-logo-img"></a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="about.html">Sobre Mí</a></li>
+            <li><a href="reel.html">Reel y Trabajo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="container">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="images/jerry-headshot.jpg" alt="Jerry Headshot">
+            </div>
+            <div class="about-text">
+                <p>Luis Solis, conocido por todos como "Jerry", es un actor joven y versátil de la Ciudad de México. A sus 12 años, ha demostrado una habilidad natural para la actuación, aportando autenticidad y carisma tanto en pantalla como en escenario. Ha participado en diversos proyectos, desde comerciales nacionales hasta cortometrajes independientes.</p>
+                <p>Su enfoque en la narración es intuitivo y genuino. Ya sea interpretando un papel dramático o siendo la cara de una marca importante, Luis se compromete a entregar un trabajo profesional y emotivo.</p>
+                <p>Cuando no está en el set, Luis disfruta de la vida como cualquier chico de su edad, explorando sus pasatiempos y buscando nuevas aventuras que inspiren su creatividad.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luis Solis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

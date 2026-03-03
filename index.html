@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Solis | Actor y Narrador</title>
+    <meta name="description" content="Portafolio de Luis Solis (Jerry), actor y narrador joven en la Ciudad de México. Proyectos destacados en doblaje, comerciales y cine.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo-digital.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><img src="images/logo-digital.svg" alt="Luis Solis" class="nav-logo-img"></a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="about.html">Sobre Mí</a></li>
+            <li><a href="reel.html">Reel y Trabajo</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <img src="images/logo-digital.svg" alt="Luis Solis Logo" class="digital-logo">
+                <h1 class="hero-title">Luis Solis</h1>
+                <p class="hero-tagline">Actor &bull; Narrador</p>
+            </div>
+            <div class="hero-image-container">
+                <img src="images/jerry-headshothero.jpg" alt="Jerry Headshot" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-label">Altura</span>
+            4'1"
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Ojos</span>
+            Café
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Cabello</span>
+            Negro
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Sindicato</span>
+            Ninguno
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Ubicación</span>
+            Ciudad de México / México
+        </div>
+    </div>
+
+    <!-- Featured Work Section -->
+    <section class="featured-section container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">El cumple de Bob</h3>
+                <p style="color: #666; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Doblaje / Voz en Off</p>
+                <p>Participación en el doblaje para Nickelodeon (SpongeBob), demostrando versatilidad vocal y capacidad para dar vida a personajes animados en producciones internacionales.</p>
+            </div>
+            <div class="featured-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Grandes Marcas</h3>
+                <p style="color: #666; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Campañas Comerciales</p>
+                <p>Presentado en anuncios nacionales para Nescafé (Mundial de Qatar), Banco Azteca y Dole Packaged Foods. Comprobada capacidad de contratación para campañas de grandes mercados.</p>
+            </div>
+            <div class="featured-card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Caoba</h3>
+                <p style="color: #666; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem;">Cortometraje</p>
+                <p>Un cortometraje narrativo de 10 minutos que destaca las capacidades de narración de formato largo y la presencia cinematográfica.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luis Solis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
